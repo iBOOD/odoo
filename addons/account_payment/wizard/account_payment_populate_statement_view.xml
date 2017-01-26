@@ -2,7 +2,7 @@
 <openerp>
     <data>
 
-        <record id="account_payment_populate_statement_view" model="ir.ui.view">
+        <!--record id="account_payment_populate_statement_view" model="ir.ui.view">
              <field name="name">Payment Populate statement</field>
              <field name="model">account.payment.populate.statement</field>
              <field name="arch" type="xml">
@@ -17,7 +17,7 @@
                     </footer>
                 </form>
              </field>
-        </record>
+        </record-->
 
         <record id="action_account_populate_statement_confirm" model="ir.actions.act_window">
              <field name="name">Payment Populate statement</field>
