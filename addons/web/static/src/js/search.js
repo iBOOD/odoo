@@ -474,7 +474,7 @@ instance.web.SearchView = instance.web.Widget.extend(/** @lends instance.web.Sea
             html: true,
             autoFocus: true,
             minLength: 1,
-            delay: 250,
+            delay: 5000,
         }).data('autocomplete');
 
         this.$el.on('input', function () {
