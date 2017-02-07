@@ -5518,9 +5518,9 @@ $.widget( "ui.autocomplete", {
 					this._keyEvent( "next", event );
 					break;
 				case keyCode.ENTER:
-					this._search(this._value());
 				case keyCode.NUMPAD_ENTER:
 					// when menu is open and has focus
+					this._search(this._value());
 					if ( this.menu.active ) {
 						// #6055 - Opera still allows the keypress to occur
 						// which causes forms to submit
