@@ -1952,6 +1952,8 @@ instance.web.form.WidgetButton = instance.web.form.FormWidget.extend({
     execute_action: function() {
         var self = this;
         var exec_action = function() {
+            // reload record to clear one2many/many2many list widget updates (eg line addition)
+            self.view.recursive_reload();
             if (self.node.attrs.confirm) {
                 var def = $.Deferred();
                 var dialog = instance.web.dialog($('<div/>').text(self.node.attrs.confirm), {
