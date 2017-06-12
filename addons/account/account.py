@@ -2413,8 +2413,10 @@ class account_model_line(osv.osv):
     }
     _order = 'sequence'
     _sql_constraints = [
-        ('credit_debit1', 'CHECK (credit*debit=0)',  'Wrong credit or debit value in model, they must be positive!'),
-        ('credit_debit2', 'CHECK (credit+debit>=0)', 'Wrong credit or debit value in model, they must be positive!'),
+        ('credit_debit1', 'CHECK ((credit * debit) = 0::numeric)',
+         'Wrong credit or debit value in model, they must be positive!'),
+        ('credit_debit2', 'CHECK ((credit + debit) >= 0::numeric)',
+         'Wrong credit or debit value in model, they must be positive!'),
     ]
 account_model_line()
 
